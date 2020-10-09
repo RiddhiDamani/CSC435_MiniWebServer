@@ -130,9 +130,9 @@ class MWS_Worker extends Thread {
                 System.out.println("No Data Received from Browser");
             }
             // Taking substring from the dataFromBrowser starting from index 4 and ending at total length of data - 9
-            System.out.println("Data from browser: " + dataFromBrowser);
+            //System.out.println("Data from browser: " + dataFromBrowser);
             String subStringData = dataFromBrowser.substring(4, dataFromBrowser.length() - 9);
-            System.out.println("FileName: " + subStringData);
+            //System.out.println("FileName: " + subStringData);
 
             if (subStringData.equals("/favicon.ico")) {
                 //System.out.println("Favicon should not be processed!!!");
