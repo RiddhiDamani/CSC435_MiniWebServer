@@ -180,7 +180,7 @@ Sure!                    </b></td></tr>
 <tr> <td align="left"><b>
 Cool thing I did...
 </b></td><td align="left"><b>
-Not sure if this counts. Created a small favicon icon (logo) for the MiniWebServer.                    </b></td></tr>
+No                    </b></td></tr>
 
 </tbody></table>
 
@@ -188,7 +188,16 @@ Not sure if this counts. Created a small favicon icon (logo) for the MiniWebServ
     only if needed:
 </font></h3><font face="Cambria" size="3">
 
-When the client resents the num1 and num2 request. Favicon request is also being sent. <p>
+<p>Though I am able to prevent the Favicon.ico /GET request using - "<link rel="icon" href="data:,">" but, I am getting an exception
+    in my Mozilla Firefox (Version 81.0.1 )browser console: [Exception... "Component returned failure code: 0x8052000f
+    (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.replaceFaviconDataFromDataURL]" nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"
+    location: "JS frame :: resource:///modules/PlacesUIUtils.jsm :: loadFavicon :: line 199" data: no]. I am not sure whether
+    you will receive this issue as the latest version of Mozilla seems to throw this exception, I believe. After a lot of research,
+    I found out that its a sessionstore.js file of Mozilla that has to be safe-deleted inorder to resolve this issue.</p>
+
+    <p>This exception does not affect the overall code functionality and I am successfully able to accept input from WebAdd.html,
+    parse the query string and return the name and sum as HTML along with the HTML Form. Also, I tested my code on Chrome and Safari
+    and I do not receive this exception there. </p>
 
 </p><p>
 
